@@ -1,0 +1,49 @@
+Fine tuning:
+1- class weight = balanced
+2- C value set to = 0.01
+3- Removing parch as a feature
+
+Changes:
+1- Train set split 2 dataset /train and validation | Via function train_test_split | 4 outputs 
+2- scaling/ standardization & retuning to C = 1 | added fare as a feature
+
+
+Original:
+Model successfully trained! First 5 predictions: [0 0 0 0 1]
+Precision on training data: 0.7410714285714286
+Recall on training data: 0.7280701754385965
+F1 score on training data: 0.7345132743362832
+
+Change #1:
+Model successfully trained! First 5 predictions: [0 0 0 0 1]
+Precision on training data: 0.7081081081081081
+Recall on training data: 0.7660818713450293
+F1 score on training data: 0.7359550561797753
+
+Change #2:
+Model successfully trained! First 5 predictions: [0 0 0 0 1]
+Precision on training data: 0.713527851458886
+Recall on training data: 0.7865497076023392
+F1 score on training data: 0.7482614742698191
+
+Change #3:
+Model successfully trained! First 5 predictions: [0 0 0 0 1]
+Precision on training data: 0.7196765498652291
+Recall on training data: 0.7807017543859649
+F1 score on training data: 0.7489481065918654
+
+Change #4:
+Precision: 0.75
+Recall: 0.8513513513513513
+F1 score: 0.7974683544303798
+First 5 Kaggle test predictions: [0 0 0 0 1]
+
+Change #5:
+Precision: 0.7411764705882353
+Recall: 0.8513513513513513
+F1 score: 0.7924528301886793
+
+First 5 Kaggle test predictions: [0 1 0 0 1]
+
+
+

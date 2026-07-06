@@ -16,19 +16,20 @@ test_data['Age'] = test_data['Age'].fillna(median_age)
 
 #encoding categorical variables
 most_common_port = train_data['Embarked'].mode()[0]
-train_data['Embarked'] = train_data['Embarked'].fillna(most_common_port)
+train_data['Embarked'] = train_data['Embarked'].fillna(most_common_port) #
 test_data['Embarked'] = test_data['Embarked'].fillna(most_common_port)
 
 all_data = pd.concat([train_data[features], test_data[features]], axis=0)
 all_data_encoded = pd.get_dummies(all_data, columns=["Sex", "Embarked"])
 
-X_train = all_data_encoded.iloc[:len(train_data)]  # First 891 rows (train data)
+X_train = all_data_encoded.iloc[:len(train_data)]  
 y_train = train_data["Survived"]
-X_test = all_data_encoded.iloc[len(train_data):]   # Remaining 418 rows (test data)
+X_test = all_data_encoded.iloc[len(train_data):]   
 
+X, y = all_data_encoded.drop['Embarked']
 
-
-model = LR()
+X_train, y_train, X_test, y_test = train_test_split()
+model = LR(C=1.5, max_iter=1000)
 
 model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
